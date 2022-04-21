@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Christophe Desagre" />
+
+<meta name="date" content="2020-05-15" />
+
+<title>research</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">research</h1>
+<h4 class="author">Christophe Desagre</h4>
+<h4 class="date">May 15, 2020</h4>
+
+</div>
+
+
+<p><br></p>
+<div id="publications">
+<div id="publications" class="section level1">
+<h1><strong>Publications</strong></h1>
+<p>Desagre, C., D’Hondt, C., Petitjean, M. (2021) The rise of fast trading: Curse or blessing for liquidity? [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3192597">SSRN</a>]</p>
+<p><abstract> <em>Abstract:</em> We identify fast traders by directly measuring message traffic and the lifetime of orders for all market members on Euronext using their identification codes. We show that the fast-traded stocks exhibit the weakest decrease in both the relative spread and the cost of round trip trade. All the robustness checks suggest that these stocks could have maintained their liquidity edge observed before the rise of fast trading, had they been less subject to it. </abstract></p>
+<p><br></p>
+<p>Desagre, C., &amp; D’Hondt, C. (2021). Googlization and retail trading activity. Journal of Behavioral and Experimental Finance, 100453. [<a href="https://doi.org/10.1016/j.jbef.2020.100453">Link to paper</a>]</p>
+<p><abstract> <em>Abstract:</em> A large body of literature documents a positive relationship between the Google Search Volume Index (SVI) and market returns or volumes. Such findings are consistent with a buying pressure due to increased attention. Unlike most of the studies that use market data, we use the trading accounts for a sample of retail investors. The advantage is twofold; we are able to disentangle purchases from sales, and our results are not biased by any institutional trading. We find that the relationship between the SVI and retail trading activity is positive but not stronger for purchases than for sales. We also demonstrate evidence of a bidirectional causality between attention and trading activity, though contemporaneous effects predominate. Our results are robust to controls based on sociodemographics or subjective investor characteristics, as well as various specifications of the SVI and different measures of trading activity. </abstract></p>
+<p><br></p>
+</div>
+<div id="workingpapers">
+<div id="working-papers" class="section level1">
+<h1><strong>Working papers</strong></h1>
+<p>Menkveld, A., Dreber, A., Holzmeister, F., Huber, J., Johannesson, M., Kirchler, M., … &amp; Wolff, C. C. (2021). Non-Standard Errors.[<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3961574">SSRN</a>]</p>
+<p><abstract> <em>Abstract</em> In statistics, samples are drawn from a population in a data generating process (DGP). Standard errors measure the uncertainty in sample estimates of population parameters. In science, evidence is generated to test hypotheses in an evidence generating process (EGP). We claim that EGP variation across researchers adds uncertainty: non-standard errors. To study them, we let 164 teams test six hypotheses on the same sample. We find that non-standard errors are sizeable, on par with standard errors. Their size (i) co-varies only weakly with team merits, reproducibility, or peer rating, (ii) declines significantly after peer-feedback, and (iii) is underestimated by participants. </abstract></p>
+<p>Video presentation of the project: #<a href="https://www.youtube.com/watch?v=TpPdHHQSZHI&amp;t=670s" class="uri">https://www.youtube.com/watch?v=TpPdHHQSZHI&amp;t=670s</a> <br></p>
+<p>Desagre, C., Mazza, P., Petitjean, M., (2020) Intraday liquidity and trading dynamics around extreme price movements in cryptocurrencies. [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3534023">SSRN</a>]</p>
+<p><abstract> <em>Abstract:</em> Covering the 8 most widespread cryptocurrencies in the world across the 16 most active trading platforms from May 2015 to July 2018, we show that intraday extreme price movements (EPMs) in cryptocurrencies are accompanied by a sharp increase in trading volume, spreads and depth. This holds true whether we focus on the Bitcoin on the most active Bitfinex platform only, or extend the analysis across several cryptocurrencies and platforms. Using the logistic regression framework adapted to rare events, we show that the number of trades is the most consistent driver of EPMs, as it is often the case for traditional markets. Finally, we analyse the analyze the interdependence dynamics between the drivers of EPMs using a vector autoregressive model (VAR) and Granger causality tests. Our results are robust before, during, and after the bubble period and to different volatility regimes. Our paper provides strong evidence that trade-based and orderbook-based variables help explain the occurrence of EPMs and indicates that cryptocurrencies markets are less dysfunctional than anticipated. </abstract></p>
+<p><br></p>
+<p>Desagre, C., Laly, F., Mazza, P., Petitjean, M. (2020) High-frequency traders and flash events: trading activity and liquidity dynamics around mini flash crashes</p>
+<p><abstract> <em>Abstract:</em> We investigate how high-frequency traders (HFTs) behave around and during a certain type of flash events known as mini flash crashes (MFCs) on 74 large, medium and small Nasdaq stocks over the period 2008-2010. To do so, we identify MFCs by replicating Nanex MFC detection algorithm and complement our study with a parallel analysis on extreme price movements (EPMs), providing an alternative way to measure them. Our findings reveal that the behavior of HFTs around and during 1.5-second crashes is ambiguous. Based on directional trade imbalance metrics, we find that HFTs do highly significantly exacerbate the crash during 1.5-second extreme price movements, which contradicts the findings by Brogaard et al. (2018), and that NHFTs are the ones who contribute to the resiliency of stock prices after EPMs (at a 1% significance level). However, based on a multivariate regression analysis, we find that, on average, HFTs reduce their liquidity demand during EPMs. When studying MFC and EPM subsamples by market capitalization, we find that HFTs do reduce their liquidity demand during EPMs occurring on large stocks but increase their liquidity demand during EPMs occurring on small stocks. The virtuous behavior of HFTs in large stocks may thus hide a more vicious behavior in small stocks. Moreover, we find that the reduction in HFT liquidity demand is more pronounced during the opening and closing periods. Finally, we find that HFT participation at time <em>t-1</em> is by far the main determinant of mini flash crashes at time <em>t</em>, whatever the model specification. </abstract></p>
+<p><br></p>
+<p>Anciaux, H., Desagre, C., Nicaise, N., &amp; Petitjean, M. (2021). Liquidity co-movements and volatility regimes in cryptocurrencies. [<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3769309">SSRN</a>]</p>
+<p><abstract> <em>Abstract:</em> We find significant evidence of liquidity commonalities among cryptos, in particular when liquidity is estimated by relying on order-book-based proxies. Both the magnitude and pervasiveness of these co-movements are very similar to those estimated for US stocks 10 and 20 years ago. When we introduce volatility regimes based on the VCRIX volatility index on cryptocurrencies, we identify stronger liquidity co-movements in high volatility regimes across all cryptocurrencies and for all liquidity proxies. The magnitude and pervasiveness of commonalities are weaker in the low volatility regime when liquidity is arguably more idiosyncratic, affecting cryptos differently and leading to more disconnected movements relative to market liquidity. We conclude that the liquidity co-movements are not orthogonal to what was observed in the past for more centralized markets.</p>
+</div>
+</div>
+<p><br></p>
+<div id="communications" class="section level1">
+<h1><strong>Communications</strong></h1>
+<p>
+<ul>
+<li><strong>2020:</strong>
+<ul>
+<li>6th International Symposium in Computational Economics and Finance (Online)</li>
+</ul></li>
+<li><strong>2019:</strong>
+<ul>
+<li>LFIN internal seminar (Mons) :belgium:</li>
+<li>3rd European capital market workshop (Dublin)</li>
+<li>32nd Finance and banking conference (Sydney)</li>
+<li>New Zealand finance meeting (Auckland)</li>
+</ul></li>
+<li><strong>2018:</strong>
+<ul>
+<li>35th AFFI conference (Paris)</li>
+<li>Belgian financial research forum (Brussels)</li>
+<li>Warsaw international economic meeting (Warsaw)</li>
+<li>Second European capital market workshop (London)</li>
+<li>Financial econometrics conference (Lancaster)</li>
+</ul></li>
+<li><strong>2017:</strong>
+<ul>
+<li>Doctoral forum in management (Mons)</li>
+<li>3L workshop (Brussels)</li>
+</ul></li>
+<li><strong>2016:</strong>
+<ul>
+<li>PhD workshop (Namur)</li>
+<li>3L workshop (Brussels)</li>
+<li>33rd AFFI conference (Liege)</li>
+</ul></li>
+</ul>
+</p>
+</div>
+<p><br></p>
+<div id="phdDissertation">
+<div id="phd-dissertation" class="section level2">
+<h2>PhD Dissertation</h2>
+<p><strong>Essays on technological innovation in finance</strong></p>
+<p><em>Abstract:</em> Innovations in financial markets have been numerous lately. Within two decades, most of the trading activity has been done electronically and trading rooms have become deserted as computers have been able to make autonomous trading decisions more rapidly than in the past; information is now spreading at the speed of light; and a plethora of electronic currencies, whose reliability is based on cryptographic proofs rather than trust, have been issued. There is no shortage of examples, from market finance to corporate finance. Every field is affected by the digitalization phenomenon: online investing and online financial advice, digital currencies and paperless payments, crowdfunding, or high-frequency trading, among others. In this thesis, we provide three empirical analyses of how some of these innovations affect financial markets.</p>
+</div>
+</div>
+<div id="press">
+<div id="press-articles" class="section level2">
+<h2><strong>Press articles </strong></h2>
+<ul>
+<li>Le bitcoin, une mine d’or digital! La Libre Eco, 08/02/2021 [<a href="https://www.lalibre.be/economie/decideurs-chroniqueurs/le-bitcoin-une-mine-d-or-digital-601c00587b50a652f79bd066">Article</a>]</li>
+<li>La bourse a vu rouge! La Libre Eco, 28/03/2020</li>
+<li>Le bitcoin, une vraie revolution?. La Libre Entreprise, 07/09/2019</li>
+<li>La Googlization en finance. La Libre Entreprise, 04/07/2018 [<a href="images/LaLibre20170128.png">Article</a>]</li>
+<li>Une finance plus digitale. La Libre Entreprise, 01/28/2017. [<a href="images/LaLibre20170128.png">Article</a>]</li>
+<li>La vitesse sur les marchés financiers : stop ou encore ? Regards économiques, 12/08/2016 (avec F. Laly et M. Petitjean) [<a href="https://www.regards-economiques.be/index.php?option=com_reco&amp;view=article&amp;cid=165https://www.regards-economiques.be/index.php?option=com_reco&amp;view=article&amp;cid=165">Article</a>]</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
