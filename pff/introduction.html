@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction | Python for Portfolio Management</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction | Python for Portfolio Management" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="cdesagre/cdesagre.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Python for Portfolio Management" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Christophe Desagre" />
+
+
+<meta name="date" content="2022-04-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="portfolioTwoStocks.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="bookstyle_pff.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Home</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#yahoo-finance"><i class="fa fa-check"></i><b>2.1</b> Yahoo! Finance</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction.html"><a href="introduction.html#plot"><i class="fa fa-check"></i><b>2.1.1</b> Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#returns"><i class="fa fa-check"></i><b>2.2</b> Returns</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#volatility"><i class="fa fa-check"></i><b>2.3</b> Volatility</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="portfolioTwoStocks.html"><a href="portfolioTwoStocks.html"><i class="fa fa-check"></i><b>3</b> Portfolio with 2 stocks</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="portfolioTwoStocks.html"><a href="portfolioTwoStocks.html#equally-weighted-portfolio"><i class="fa fa-check"></i><b>3.1</b> Equally-weighted portfolio</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="portfolioTwoStocks.html"><a href="portfolioTwoStocks.html#portfolio-returns"><i class="fa fa-check"></i><b>3.1.1</b> Portfolio returns</a></li>
+<li class="chapter" data-level="3.1.2" data-path="portfolioTwoStocks.html"><a href="portfolioTwoStocks.html#portfolio-volatility"><i class="fa fa-check"></i><b>3.1.2</b> Portfolio volatility</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="portfolioNstocks.html"><a href="portfolioNstocks.html"><i class="fa fa-check"></i><b>4</b> Portfolio with N stocks</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python for Portfolio Management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
+<p>In this chapter, we learn how to retrieve data from two APIs. First, we retrieve price data from Yahoo! Finance.</p>
+<div id="yahoo-finance" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Yahoo! Finance</h2>
+<p>Let’s start by importing the necessary packages.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb1-2"><a href="introduction.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="introduction.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="introduction.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+<p>Then, we need to specify three parameters:
+* the tickers
+* the start date
+* the end date</p>
+<p>We download the data using <code>yf.download</code>. We only keep closing prices.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="introduction.html#cb2-1" aria-hidden="true" tabindex="-1"></a>tickers <span class="op">=</span> [<span class="st">&#39;AAPL&#39;</span>, <span class="st">&#39;MSFT&#39;</span>]</span>
+<span id="cb2-2"><a href="introduction.html#cb2-2" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> <span class="st">&#39;2010-01-01&#39;</span></span>
+<span id="cb2-3"><a href="introduction.html#cb2-3" aria-hidden="true" tabindex="-1"></a>end <span class="op">=</span> <span class="st">&#39;2021-12-31&#39;</span></span>
+<span id="cb2-4"><a href="introduction.html#cb2-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> yf.download(tickers<span class="op">=</span>tickers, start<span class="op">=</span>start, end<span class="op">=</span>end, progress<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;Close&#39;</span>]</span>
+<span id="cb2-5"><a href="introduction.html#cb2-5" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div>
+<pre><code>##                 AAPL       MSFT
+## Date                           
+## 2009-12-31  7.526071  30.480000
+## 2010-01-04  7.643214  30.950001
+## 2010-01-05  7.656429  30.959999
+## 2010-01-06  7.534643  30.770000
+## 2010-01-07  7.520714  30.450001</code></pre>
+<p>To access the latest observations, we use <code>.tail()</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="introduction.html#cb4-1" aria-hidden="true" tabindex="-1"></a>data.tail()</span></code></pre></div>
+<pre><code>##                   AAPL        MSFT
+## Date                              
+## 2021-12-23  176.279999  334.690002
+## 2021-12-27  180.330002  342.450012
+## 2021-12-28  179.289993  341.250000
+## 2021-12-29  179.380005  341.950012
+## 2021-12-30  178.199997  339.320007</code></pre>
+<div id="plot" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Plot</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="introduction.html#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb6-2"><a href="introduction.html#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.plot(data)</span>
+<span id="cb6-3"><a href="introduction.html#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+</div>
+<div id="returns" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Returns</h2>
+<p>We can compute returns as:</p>
+<p><span class="math display">\[ R_{i,t} = \frac{P_{i,t} - P_{i, t-1}}{P_{i,t-1}} \]</span>
+This can easily been done using the <code>.pct_change()</code> method. We also use <code>.dropna()</code> to suppress the first missing observation, lost due to the computation.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="introduction.html#cb7-1" aria-hidden="true" tabindex="-1"></a>rets <span class="op">=</span> data.pct_change().dropna()</span>
+<span id="cb7-2"><a href="introduction.html#cb7-2" aria-hidden="true" tabindex="-1"></a>rets.head()</span></code></pre></div>
+<pre><code>##                 AAPL      MSFT
+## Date                          
+## 2010-01-04  0.015565  0.015420
+## 2010-01-05  0.001729  0.000323
+## 2010-01-06 -0.015906 -0.006137
+## 2010-01-07 -0.001849 -0.010400
+## 2010-01-08  0.006648  0.006897</code></pre>
+<p>Alternatively, we can compute log-returns:</p>
+<p><span class="math display">\[ LogR_{i,t} = \ln \left (\frac{P_{i,t}}{P_{i,t-1}} \right )  \]</span></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="introduction.html#cb9-1" aria-hidden="true" tabindex="-1"></a>logRets <span class="op">=</span> np.log(data<span class="op">/</span>data.shift(<span class="dv">1</span>)).dropna()</span>
+<span id="cb9-2"><a href="introduction.html#cb9-2" aria-hidden="true" tabindex="-1"></a>logRets.head()</span></code></pre></div>
+<pre><code>##                 AAPL      MSFT
+## Date                          
+## 2010-01-04  0.015445  0.015302
+## 2010-01-05  0.001727  0.000323
+## 2010-01-06 -0.016034 -0.006156
+## 2010-01-07 -0.001850 -0.010454
+## 2010-01-08  0.006626  0.006873</code></pre>
+<p>Let’s create our own function to compute returns. By default, this function computes “normal returns” but we can compute log-returns if <code>log</code> is set to <code>True</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="introduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_returns(df, log<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb11-2"><a href="introduction.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> log<span class="op">==</span><span class="va">True</span>:</span>
+<span id="cb11-3"><a href="introduction.html#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.log(df<span class="op">/</span>df.shift(<span class="dv">1</span>)).dropna()</span>
+<span id="cb11-4"><a href="introduction.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb11-5"><a href="introduction.html#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df.pct_change().dropna()</span></code></pre></div>
+</div>
+<div id="volatility" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Volatility</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="portfolioTwoStocks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cdesagre/cdesagre.github.io/01-introduction.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
